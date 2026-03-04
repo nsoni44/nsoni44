@@ -182,31 +182,11 @@ Collection of AWS exploitation labs:
 
 ---
 
-## 🏆 GitHub Achievements
-
-<div align="center">
-
-![Trophies](https://github-profile-trophy.vercel.app/?username=nsoni44&theme=tokyonight&no-frame=true&no-bg=true&column=7&margin-w=15&margin-h=15)
-
-</div>
-
----
-
 ## 📈 Contribution Activity
 
 <div align="center">
 
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=nsoni44&custom_title=Contribution%20Activity&hide_border=true&border_radius=15&bg_color=0D1117&color=00f7f4&line=00f7f4&point=ffffff&area_color=00f7f4&title_color=00f7f4&area=true" width="98%" alt="Contribution Graph"/>
-
-</div>
-
----
-
-## 🐍 Watch My Contributions Get Eaten!
-
-<div align="center">
-
-![Snake animation](https://raw.githubusercontent.com/nsoni44/nsoni44/output/github-contribution-grid-snake-dark.svg)
 
 </div>
 
