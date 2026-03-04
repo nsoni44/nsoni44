@@ -19,7 +19,7 @@
 ```python
 class SecurityEngineer:
     def __init__(self):
-        self.name = "Nitin Soni"
+        self.name = "Naveen Soni"
         self.role = "Cloud Security Engineer"
         self.location = "🌍 Earth"
         self.interests = ["AWS Security", "DevOps", "Red Team", "Open Source"]
