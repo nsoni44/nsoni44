@@ -236,6 +236,11 @@ graph LR
 ### ⚡ Latest Activity
 
 <!--START_SECTION:activity-->
+1. 🎉 Merged PR [#4](https://github.com/nsoni44/github-security-audit/pull/4) in [nsoni44/github-security-audit](https://github.com/nsoni44/github-security-audit)
+2. 💪 Opened PR [#4](https://github.com/nsoni44/github-security-audit/pull/4) in [nsoni44/github-security-audit](https://github.com/nsoni44/github-security-audit)
+3. 🎉 Merged PR [#3](https://github.com/nsoni44/github-security-audit/pull/3) in [nsoni44/github-security-audit](https://github.com/nsoni44/github-security-audit)
+4. 💪 Opened PR [#3](https://github.com/nsoni44/github-security-audit/pull/3) in [nsoni44/github-security-audit](https://github.com/nsoni44/github-security-audit)
+5. 💪 Opened PR [#2](https://github.com/nsoni44/aws-vulnerability-scanner-demo/pull/2) in [nsoni44/aws-vulnerability-scanner-demo](https://github.com/nsoni44/aws-vulnerability-scanner-demo)
 <!--END_SECTION:activity-->
 
 ---
