@@ -236,11 +236,11 @@ graph LR
 ### ⚡ Latest Activity
 
 <!--START_SECTION:activity-->
-1. 🎉 Merged PR [#3](https://github.com/nsoni44/S3_Ransomware_red_team_AWS/pull/3) in [nsoni44/S3_Ransomware_red_team_AWS](https://github.com/nsoni44/S3_Ransomware_red_team_AWS)
-2. 🎉 Merged PR [#3](https://github.com/nsoni44/Lambda_Command_injeciton_DynamoDB/pull/3) in [nsoni44/Lambda_Command_injeciton_DynamoDB](https://github.com/nsoni44/Lambda_Command_injeciton_DynamoDB)
-3. 💪 Opened PR [#3](https://github.com/nsoni44/S3_Ransomware_red_team_AWS/pull/3) in [nsoni44/S3_Ransomware_red_team_AWS](https://github.com/nsoni44/S3_Ransomware_red_team_AWS)
-4. 💪 Opened PR [#3](https://github.com/nsoni44/Lambda_Command_injeciton_DynamoDB/pull/3) in [nsoni44/Lambda_Command_injeciton_DynamoDB](https://github.com/nsoni44/Lambda_Command_injeciton_DynamoDB)
-5. 🎉 Merged PR [#4](https://github.com/nsoni44/github-security-audit/pull/4) in [nsoni44/github-security-audit](https://github.com/nsoni44/github-security-audit)
+1. 🎉 Merged PR [#5](https://github.com/nsoni44/git_learning/pull/5) in [nsoni44/git_learning](https://github.com/nsoni44/git_learning)
+2. 💪 Opened PR [#5](https://github.com/nsoni44/git_learning/pull/5) in [nsoni44/git_learning](https://github.com/nsoni44/git_learning)
+3. 🎉 Merged PR [#5](https://github.com/nsoni44/task-tracker-cli/pull/5) in [nsoni44/task-tracker-cli](https://github.com/nsoni44/task-tracker-cli)
+4. 💪 Opened PR [#5](https://github.com/nsoni44/task-tracker-cli/pull/5) in [nsoni44/task-tracker-cli](https://github.com/nsoni44/task-tracker-cli)
+5. 🎉 Merged PR [#5](https://github.com/nsoni44/svetri-website/pull/5) in [nsoni44/svetri-website](https://github.com/nsoni44/svetri-website)
 <!--END_SECTION:activity-->
 
 ---
