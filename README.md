@@ -236,11 +236,11 @@ graph LR
 ### ⚡ Latest Activity
 
 <!--START_SECTION:activity-->
-1. 🎉 Merged PR [#5](https://github.com/nsoni44/git_learning/pull/5) in [nsoni44/git_learning](https://github.com/nsoni44/git_learning)
-2. 💪 Opened PR [#5](https://github.com/nsoni44/git_learning/pull/5) in [nsoni44/git_learning](https://github.com/nsoni44/git_learning)
-3. 🎉 Merged PR [#5](https://github.com/nsoni44/task-tracker-cli/pull/5) in [nsoni44/task-tracker-cli](https://github.com/nsoni44/task-tracker-cli)
-4. 💪 Opened PR [#5](https://github.com/nsoni44/task-tracker-cli/pull/5) in [nsoni44/task-tracker-cli](https://github.com/nsoni44/task-tracker-cli)
-5. 🎉 Merged PR [#5](https://github.com/nsoni44/svetri-website/pull/5) in [nsoni44/svetri-website](https://github.com/nsoni44/svetri-website)
+1. ❌ Closed PR [#1](https://github.com/nsoni44/svetri-website/pull/1) in [nsoni44/svetri-website](https://github.com/nsoni44/svetri-website)
+2. 🗣 Commented on [#1](https://github.com/nsoni44/svetri-website/pull/1#issuecomment-4382988664) in [nsoni44/svetri-website](https://github.com/nsoni44/svetri-website)
+3. ❌ Closed PR [#6](https://github.com/nsoni44/svetri-website/pull/6) in [nsoni44/svetri-website](https://github.com/nsoni44/svetri-website)
+4. ❌ Closed PR [#3](https://github.com/nsoni44/svetri-website/pull/3) in [nsoni44/svetri-website](https://github.com/nsoni44/svetri-website)
+5. ❌ Closed PR [#2](https://github.com/nsoni44/svetri-website/pull/2) in [nsoni44/svetri-website](https://github.com/nsoni44/svetri-website)
 <!--END_SECTION:activity-->
 
 ---
