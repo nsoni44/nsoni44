@@ -236,11 +236,11 @@ graph LR
 ### ⚡ Latest Activity
 
 <!--START_SECTION:activity-->
-1. 🎉 Merged PR [#10](https://github.com/nsoni44/svetri-website/pull/10) in [nsoni44/svetri-website](https://github.com/nsoni44/svetri-website)
-2. 💪 Opened PR [#10](https://github.com/nsoni44/svetri-website/pull/10) in [nsoni44/svetri-website](https://github.com/nsoni44/svetri-website)
-3. ❌ Closed PR [#1](https://github.com/nsoni44/svetri-website/pull/1) in [nsoni44/svetri-website](https://github.com/nsoni44/svetri-website)
-4. 🗣 Commented on [#1](https://github.com/nsoni44/svetri-website/pull/1#issuecomment-4382988664) in [nsoni44/svetri-website](https://github.com/nsoni44/svetri-website)
-5. ❌ Closed PR [#6](https://github.com/nsoni44/svetri-website/pull/6) in [nsoni44/svetri-website](https://github.com/nsoni44/svetri-website)
+1. ℹ️ Reopened PR [#15](https://github.com/nsoni44/aws-vulnerability-scanner-demo/pull/15) in [nsoni44/aws-vulnerability-scanner-demo](https://github.com/nsoni44/aws-vulnerability-scanner-demo)
+2. ❌ Closed PR [#15](https://github.com/nsoni44/aws-vulnerability-scanner-demo/pull/15) in [nsoni44/aws-vulnerability-scanner-demo](https://github.com/nsoni44/aws-vulnerability-scanner-demo)
+3. 🗣 Commented on [#12](https://github.com/nsoni44/aws-vulnerability-scanner-demo/pull/12#issuecomment-4405865727) in [nsoni44/aws-vulnerability-scanner-demo](https://github.com/nsoni44/aws-vulnerability-scanner-demo)
+4. 🗣 Commented on [#12](https://github.com/nsoni44/aws-vulnerability-scanner-demo/pull/12#issuecomment-4405857601) in [nsoni44/aws-vulnerability-scanner-demo](https://github.com/nsoni44/aws-vulnerability-scanner-demo)
+5. ❌ Closed PR [#2](https://github.com/nsoni44/aws-vulnerability-scanner-demo/pull/2) in [nsoni44/aws-vulnerability-scanner-demo](https://github.com/nsoni44/aws-vulnerability-scanner-demo)
 <!--END_SECTION:activity-->
 
 ---
