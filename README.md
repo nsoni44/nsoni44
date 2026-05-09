@@ -236,11 +236,11 @@ graph LR
 ### ⚡ Latest Activity
 
 <!--START_SECTION:activity-->
-1. 🎉 Merged PR [#12](https://github.com/nsoni44/svetri-website/pull/12) in [nsoni44/svetri-website](https://github.com/nsoni44/svetri-website)
-2. 💪 Opened PR [#12](https://github.com/nsoni44/svetri-website/pull/12) in [nsoni44/svetri-website](https://github.com/nsoni44/svetri-website)
-3. 🎉 Merged PR [#11](https://github.com/nsoni44/svetri-website/pull/11) in [nsoni44/svetri-website](https://github.com/nsoni44/svetri-website)
-4. 💪 Opened PR [#11](https://github.com/nsoni44/svetri-website/pull/11) in [nsoni44/svetri-website](https://github.com/nsoni44/svetri-website)
-5. ❌ Closed PR [#15](https://github.com/nsoni44/aws-vulnerability-scanner-demo/pull/15) in [nsoni44/aws-vulnerability-scanner-demo](https://github.com/nsoni44/aws-vulnerability-scanner-demo)
+1. 🎉 Merged PR [#15](https://github.com/nsoni44/svetri-website/pull/15) in [nsoni44/svetri-website](https://github.com/nsoni44/svetri-website)
+2. 💪 Opened PR [#15](https://github.com/nsoni44/svetri-website/pull/15) in [nsoni44/svetri-website](https://github.com/nsoni44/svetri-website)
+3. 🎉 Merged PR [#14](https://github.com/nsoni44/svetri-website/pull/14) in [nsoni44/svetri-website](https://github.com/nsoni44/svetri-website)
+4. 💪 Opened PR [#14](https://github.com/nsoni44/svetri-website/pull/14) in [nsoni44/svetri-website](https://github.com/nsoni44/svetri-website)
+5. 🎉 Merged PR [#13](https://github.com/nsoni44/svetri-website/pull/13) in [nsoni44/svetri-website](https://github.com/nsoni44/svetri-website)
 <!--END_SECTION:activity-->
 
 ---
