@@ -2,25 +2,180 @@ name: Update README Activity
 
 on:
   schedule:
-    - cron: '*/30 * * * *' # Runs every 30 minutes
+    - cron: '*/30 * * * *'
   workflow_dispatch:
 
 permissions:
   contents: write
 
+concurrency:
+  group: update-readme-activity
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     name: Update Profile README
 
     steps:
       - uses: actions/checkout@v4
-      - uses: jamesgeorge007/github-activity-readme@v0.4.6
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update activity section
+        uses: actions/github-script@v7
         with:
-          GH_USERNAME: nsoni44
-          COMMIT_NAME: github-actions[bot]
-          COMMIT_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
-          COMMIT_MSG: 'chore: update activity in profile README'
-          MAX_LINES: 5
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+
+            const username = 'nsoni44';
+            const maxLines = 5;
+            const readmePath = 'README.md';
+
+            const eventIcons = {
+              PushEvent: '🚀',
+              PullRequestEvent: '🎉',
+              IssuesEvent: '🐛',
+              IssueCommentEvent: '🗣️',
+              PullRequestReviewEvent: '👀',
+              PullRequestReviewCommentEvent: '💬',
+              CreateEvent: '📦',
+              DeleteEvent: '🗑️',
+              WatchEvent: '⭐',
+              ForkEvent: '🍴',
+              ReleaseEvent: '🏷️',
+              PublicEvent: '🌐',
+              MemberEvent: '👥',
+              CommitCommentEvent: '💭',
+              GollumEvent: '📝'
+            };
+
+            function repoLink(repo) {
+              return `[${repo.name}](https://github.com/${repo.name})`;
+            }
+
+            function itemLink(text, url) {
+              return `[${text}](${url})`;
+            }
+
+            function capitalize(text) {
+              return text ? text.charAt(0).toUpperCase() + text.slice(1) : text;
+            }
+
+            function renderEvent(event) {
+              const icon = eventIcons[event.type] || '•';
+              const repo = repoLink(event.repo);
+
+              switch (event.type) {
+                case 'PushEvent':
+                  return `${icon} Pushed to ${repo}`;
+                case 'IssuesEvent': {
+                  const action = event.payload.action || 'updated';
+                  const issue = event.payload.issue;
+                  if (!issue) return `${icon} ${capitalize(action)} an issue in ${repo}`;
+                  return `${icon} ${capitalize(action)} issue ${itemLink(`#${issue.number}`, issue.html_url)} in ${repo}`;
+                }
+                case 'IssueCommentEvent': {
+                  const issue = event.payload.issue;
+                  const comment = event.payload.comment;
+                  if (!issue || !comment) return `${icon} Commented in ${repo}`;
+                  return `${icon} Commented on ${itemLink(`#${issue.number}`, comment.html_url)} in ${repo}`;
+                }
+                case 'PullRequestEvent': {
+                  const action = event.payload.action || 'updated';
+                  const pr = event.payload.pull_request;
+                  if (!pr) return `${icon} ${capitalize(action)} a pull request in ${repo}`;
+                  return `${icon} ${capitalize(action)} PR ${itemLink(`#${pr.number}`, pr.html_url)} in ${repo}`;
+                }
+                case 'PullRequestReviewEvent': {
+                  const pr = event.payload.pull_request;
+                  if (!pr) return `${icon} Reviewed a pull request in ${repo}`;
+                  return `${icon} Reviewed PR ${itemLink(`#${pr.number}`, pr.html_url)} in ${repo}`;
+                }
+                case 'PullRequestReviewCommentEvent': {
+                  const pr = event.payload.pull_request;
+                  if (!pr) return `${icon} Commented on a pull request in ${repo}`;
+                  return `${icon} Commented on PR ${itemLink(`#${pr.number}`, pr.html_url)} in ${repo}`;
+                }
+                case 'CreateEvent': {
+                  const refType = event.payload.ref_type || 'resource';
+                  const ref = event.payload.ref ? ` \`${event.payload.ref}\`` : '';
+                  return `${icon} Created ${refType}${ref} in ${repo}`;
+                }
+                case 'DeleteEvent': {
+                  const refType = event.payload.ref_type || 'resource';
+                  const ref = event.payload.ref ? ` \`${event.payload.ref}\`` : '';
+                  return `${icon} Deleted ${refType}${ref} in ${repo}`;
+                }
+                case 'WatchEvent':
+                  return `${icon} Starred ${repo}`;
+                case 'ForkEvent':
+                  return `${icon} Forked ${repo}`;
+                case 'ReleaseEvent': {
+                  const release = event.payload.release;
+                  if (!release) return `${icon} Published a release in ${repo}`;
+                  return `${icon} Released ${itemLink(release.tag_name, release.html_url)} in ${repo}`;
+                }
+                default:
+                  return `${icon} ${event.type.replace(/Event$/, '')} in ${repo}`;
+              }
+            }
+
+            async function fetchEventsWithRetry(retries = 3) {
+              for (let attempt = 1; attempt <= retries; attempt++) {
+                try {
+                  const response = await github.request('GET /users/{username}/events/public', {
+                    username,
+                    per_page: 100,
+                    headers: {
+                      'X-GitHub-Api-Version': '2022-11-28'
+                    }
+                  });
+                  return response.data;
+                } catch (error) {
+                  if (attempt === retries) throw error;
+                  core.info(`Fetch attempt ${attempt} failed: ${error.message}`);
+                  await new Promise(resolve => setTimeout(resolve, attempt * 2000));
+                }
+              }
+            }
+
+            const events = await fetchEventsWithRetry();
+
+            const lines = events
+              .filter(event => !['PublicEvent'].includes(event.type))
+              .slice(0, maxLines)
+              .map((event, index) => `${index + 1}. ${renderEvent(event)}`);
+
+            const start = '<!--START_SECTION:activity-->';
+            const end = '<!--END_SECTION:activity-->';
+
+            const readme = fs.readFileSync(readmePath, 'utf8');
+            const startIndex = readme.indexOf(start);
+            const endIndex = readme.indexOf(end);
+
+            if (startIndex === -1 || endIndex === -1 || endIndex < startIndex) {
+              core.setFailed('Could not find activity section markers in README.md');
+              return;
+            }
+
+            const before = readme.slice(0, startIndex + start.length);
+            const after = readme.slice(endIndex);
+            const newBlock = `\n${lines.join('\n')}\n`;
+            const updated = `${before}${newBlock}${after}`;
+
+            fs.writeFileSync(readmePath, updated);
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          if git diff --quiet README.md; then
+            echo "No changes to commit"
+            exit 0
+          fi
+
+          git add README.md
+          git commit -m "chore: update activity in profile README"
+          git push
