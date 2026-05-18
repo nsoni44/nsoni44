@@ -236,11 +236,11 @@ graph LR
 ### ⚡ Latest Activity
 
 <!--START_SECTION:activity-->
+- Pushed 0 commit(s) to `nsoni44/S3_Ransomware_red_team_AWS`
+- PullRequestReview on `nsoni44/S3_Ransomware_red_team_AWS`
+- Pushed 0 commit(s) to `nsoni44/aws-vulnerability-scanner-demo`
+- PullRequestReview on `nsoni44/aws-vulnerability-scanner-demo`
 - closed a pull request in `nsoni44/task-tracker-cli`
-- merged a pull request in `nsoni44/task-tracker-cli`
-- Pushed 0 commit(s) to `nsoni44/task-tracker-cli`
-- Pushed 0 commit(s) to `nsoni44/task-tracker-cli`
-- merged a pull request in `nsoni44/task-tracker-cli`
 <!--END_SECTION:activity-->
 
 ---
