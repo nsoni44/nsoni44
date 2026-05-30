@@ -236,11 +236,11 @@ graph LR
 ### ⚡ Latest Activity
 
 <!--START_SECTION:activity-->
+- Pushed 0 commit(s) to `nsoni44/aws-vulnerability-scanner-demo`
+- PullRequestReview on `nsoni44/aws-vulnerability-scanner-demo`
 - Pushed 0 commit(s) to `nsoni44/lambda-audit-automation`
 - Pushed 0 commit(s) to `nsoni44/lambda-audit-automation`
-- merged a pull request in `nsoni44/lambda-audit-automation`
-- opened a pull request in `nsoni44/lambda-audit-automation`
-- Created branch in `nsoni44/lambda-audit-automation`
+- Pushed 0 commit(s) to `nsoni44/lambda-audit-automation`
 <!--END_SECTION:activity-->
 
 ---
